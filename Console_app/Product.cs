@@ -5,9 +5,9 @@ namespace Console_app
 
 	public class Product
 	{
-		private String name;
-		private decimal price;
-		private int quantity;
+		protected String name;
+		protected decimal price;
+		protected int quantity;
         public event SellProductEventHandler productSold;
 
         public Product()
@@ -91,6 +91,17 @@ namespace Console_app
 
 		}
 
+		public void sellEvaluation(int quantityToSell, out decimal income, out decimal remainingStock)
+        {
+            income =  Price * quantityToSell;
+			remainingStock = Quantity - quantityToSell;
+			
+		}
+
+		public static void upperName(ref Product product)
+		{
+			product.Name = product.Name.ToUpper();
+		}
 		
 
 	}
