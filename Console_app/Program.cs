@@ -125,8 +125,44 @@ internal class Program
         {
             Console.WriteLine("Les deux produits ne sont pas egaux");
         }
+
+
+
+        Product myProduct = new Product();
+        myProduct.Name = "ce produit est minuscule";
+        myProduct.Price = 40;
+        myProduct.Quantity = 10;
+        decimal revenue=0;
+        decimal stock=0;
+
+        //Console.WriteLine("Le revenue actuel est de: " + revenue + " et la quantite est: " + stock);
+
+        //Console.WriteLine("Le libele du produit actuel est : " + myProduct.Name);
+
+
+        //myProduct.sellEvaluation(3, out revenue, out stock);
+        //Product.upperName(ref myProduct);
+
+
+        //Console.WriteLine("Le revenue actuel est de: " + revenue + " et la quantite est: " + stock);
+
+        //Console.WriteLine("Le libele du produit atuel est: " + myProduct.Name);
+
+        DiscountedProduct myDiscountedProduct = new DiscountedProduct("DiscountedProduct_01", 30, 20, 35);
+
+        Product unProduit = new DiscountedProduct("DiscountedProduct_02", 30, 10, 15);
+
+        Console.WriteLine(unProduit.Name);
+
+        DiscountedProduct discountedProduct01 = (DiscountedProduct) unProduit;
+
+        Product product02 = new Product();
+
+        //DiscountedProduct discountedProduct02 = (DiscountedProduct) product02;
+
+
+
+
     }
-
-
 
 }
