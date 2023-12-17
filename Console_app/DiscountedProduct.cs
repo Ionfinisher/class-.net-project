@@ -7,6 +7,7 @@ namespace Console_app
 
 		public DiscountedProduct()
 		{
+
 		}
 
 
